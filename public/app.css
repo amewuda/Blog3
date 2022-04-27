@@ -1,0 +1,12 @@
+.image{
+    background-size: cover;
+}
+body {
+    background: "/seth.jpeg";
+}
+/* .jumbotron{
+    background-color: gray
+} */
+#delete-form{
+    display: inline;
+}

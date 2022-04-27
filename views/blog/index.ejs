@@ -1,0 +1,37 @@
+<%- include ("../partials/header"); %>
+<div class="container">
+    <h2>This will be for the homepage of the Blog</h2>
+    <a class="btn btn-xs btn-primary" href="/blogs/new">Add New Blog</a>
+</div>
+
+
+<div class="container">
+    <% blogs.forEach(function(blog){ %>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-4 col-xs-6-offset">
+                    <div class="header">
+                        <h2><%= blog.title %></h2>
+                    </div>
+                    <div class="image">
+                        <img src="<%= blog.image %>" alt="">
+                    </div>
+                    <div class="created">
+                        <span><%= blog.created %></span>
+                    </div>
+                    <div class="caption">
+                        <p><%= blog.body%></p>
+                        <a href="/blogs/<%=blog._id%>">Show page</a>
+                    </div>
+                </div>
+               
+            </div>
+           
+        </div>
+        <hr>
+    <% }) %>
+</div>
+
+
+
+<%- include ("../partials/footer"); %>
